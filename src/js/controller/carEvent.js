@@ -19,7 +19,7 @@ function checkInputLength(input) {
   return true;
 }
 
-function checkCarName() {
+export function checkCarName() {
   let names = getCarNames();
   console.log(names);
   if (checkEmpty(names) && checkInputLength(names)) {
