@@ -5,12 +5,24 @@ import {
   getCarContainer,
   getCarNames,
 } from "./../utils/dom.js";
-import { addPutCarNameEvent } from "./carEvent.js";
+import { addPutCarNameEvent, checkCarName } from "./carEvent.js";
+
+function checkInputNumber() {
+  let number = getAttempts();
+  if (number <= 0) {
+    alert("시도 횟수는 0이나 음수가 될수없습니다");
+    return false;
+  }
+  return true;
+}
 
 function addRacingEvent({ target }) {
   console.log(target);
   let carNames = getCarNames();
   let retryNumber = getAttempts();
+  if (checkCarName() && checkInputNumber(retryNumber)) {
+    console.log("go");
+  }
   //r게임 시작
 }
 
