@@ -3,6 +3,9 @@ export const $ = (e) => document.querySelector(e);
 export function getCarNames() {
   let $carNames = $(".car-names");
   let result = $carNames.value.split(",");
+  result = result.map((e) => {
+    return e.trim();
+  });
   return result;
 }
 
