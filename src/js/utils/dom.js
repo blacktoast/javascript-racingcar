@@ -10,3 +10,7 @@ export function getAttempts() {
   let $getNumber = $(".attempts");
   return $getNumber.value;
 }
+
+export function getCarContainer() {
+  return $(".car-container");
+}
