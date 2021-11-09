@@ -1,5 +1,5 @@
 import { renderCar } from "../render/renderCarName.js";
-import { getCarNames } from "../utils/dom.js";
+import { $, getCarNames } from "../utils/dom.js";
 
 function checkEmpty(input) {
   if (input.includes("")) {
@@ -10,9 +10,7 @@ function checkEmpty(input) {
 }
 
 function checkInputLength(input) {
-  input = input.filter((e) => {
-    return e.length > 5;
-  });
+  input = input.filter((e) => e.length > 5);
   console.log(input);
   if (input.length !== 0) {
     alert("차 이름은 5글자를 넘을수가 없습니다.");
@@ -27,6 +25,7 @@ function checkCarName() {
   if (checkEmpty(names) && checkInputLength(names)) {
     return true;
   }
+  $(".car-names").value = "";
   return false;
 }
 
