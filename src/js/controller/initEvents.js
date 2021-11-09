@@ -7,8 +7,12 @@ function addRacingEvent({ target }) {
   console.log(carNames, retryNumber);
 }
 
+function addPutCarNameEvent({ target }) {
+  
+}
 export function initEvents() {
-  console.log($(".start"));
+  let $putCar = $(".put-car-names");
   let $startBtn = $(".start");
+  $putCar.addEventListener("click", addPutCarNameEvent);
   $startBtn.addEventListener("click", addRacingEvent);
 }

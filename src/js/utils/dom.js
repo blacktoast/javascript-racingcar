@@ -2,7 +2,8 @@ export const $ = (e) => document.querySelector(e);
 
 export function getCarNames() {
   let $carNames = $(".car-names");
-  return $carNames.value;
+  let result = $carNames.value.split(",");
+  return result;
 }
 
 export function getAttempts() {
