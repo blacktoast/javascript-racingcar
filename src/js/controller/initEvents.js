@@ -22,7 +22,7 @@ function addRacingEvent({ target }) {
   let carNames = getCarNames();
   let retryNumber = getAttempts();
   if (checkCarName() && checkInputNumber(retryNumber)) {
-    startRacing();
+    startRacing(retryNumber);
   }
   //r게임 시작
 }
