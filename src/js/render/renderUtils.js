@@ -23,12 +23,10 @@ export function addLoadingHtml() {
 export function renderForwardCar(players) {
   let template = players.map((e, index) => {
     let tmp = "";
-    for (let i = 0; i < e.state; i++) {
-      tmp += forwardHtml();
-    }
-    tmp += addLoadingHtml();
+    for (let i = 0; i < e.state; i++) {}
+    tmp += forwardHtml();
     let $carPlayer = getCarPlayerByClass();
-
+    $carPlayer[index].insertAdjacentHTML("afterbegin", tmp);
     console.log($carPlayer[index]);
   });
 }
