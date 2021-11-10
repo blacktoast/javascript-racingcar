@@ -4,7 +4,9 @@ function carPlayerHtml(carNames) {
   return carNames
     .map((e) => {
       return `<div class="mr-2">
-                <div class="car-player" data-car-id=${e}>${e}</div>
+                <div class="car-player" data-car-id=${e}>${e}
+                </div>
+                <div class="forward-container"></div>
               </div>
     `;
     })

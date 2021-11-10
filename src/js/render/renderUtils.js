@@ -21,14 +21,14 @@ export function addLoadingHtml() {
 }
 
 export function renderForwardCar(players) {
-  let template = players.map((e) => {
+  let template = players.map((e, index) => {
     let tmp = "";
     for (let i = 0; i < e.state; i++) {
       tmp += forwardHtml();
     }
     tmp += addLoadingHtml();
     let $carPlayer = getCarPlayerByClass();
-    $carPlayer.dataset.carId[e.name];
-    console.log($carPlayer);
+
+    console.log($carPlayer[index]);
   });
 }

@@ -15,7 +15,7 @@ export function getAttempts() {
 }
 
 export function getCarPlayerByClass() {
-  return $(".car-player");
+  return document.querySelectorAll(".car-player");
 }
 
 export function getCarContainer() {
