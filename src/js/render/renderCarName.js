@@ -1,3 +1,4 @@
+import { state } from "../state.js";
 import { getCarContainer, getCarNames } from "../utils/dom.js";
 function carPlayerHtml(carNames) {
   return carNames

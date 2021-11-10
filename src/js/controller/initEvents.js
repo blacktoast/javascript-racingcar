@@ -1,3 +1,4 @@
+import { startRacing } from "../game/racing.js";
 import { renderCar } from "../render/renderCarName.js";
 import {
   $,
@@ -21,7 +22,7 @@ function addRacingEvent({ target }) {
   let carNames = getCarNames();
   let retryNumber = getAttempts();
   if (checkCarName() && checkInputNumber(retryNumber)) {
-    console.log("go");
+    startRacing();
   }
   //r게임 시작
 }
