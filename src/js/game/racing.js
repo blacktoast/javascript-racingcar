@@ -1,3 +1,4 @@
+import { renderForwardCar } from "../render/renderUtils.js";
 import { state } from "../state.js";
 import { getCarNames } from "./../utils/dom.js";
 
@@ -37,7 +38,7 @@ function generateRandom() {
 function goOneStep(players) {
   players.map((e) => {
     let random = generateRandom();
-    console.log(random);
+    console.log("radom");
     if (random > 3) {
       e.state += 1;
     }
@@ -46,7 +47,19 @@ function goOneStep(players) {
 
 function startRace(attemptsNumber) {
   let players = state.cars;
-  
+  let count = 0;
+  let time = setTimeout(
+    setTimeout(function step() {
+      console.log(count);
+      if (count !== Number(attemptsNumber)) {
+        goOneStep(players);
+        renderForwardCar(players);
+        clearTimeout(time);
+        time = setTimeout(step, 1000); // (*)
+      }
+      count++;
+    }, 1000)
+  );
   console.log(state);
 }
 

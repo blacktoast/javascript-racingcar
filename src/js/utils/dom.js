@@ -14,6 +14,10 @@ export function getAttempts() {
   return $getNumber.value;
 }
 
+export function getCarPlayerByClass() {
+  return $(".car-player");
+}
+
 export function getCarContainer() {
   return $(".car-container");
 }

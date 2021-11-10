@@ -19,6 +19,7 @@ function checkInputNumber() {
 
 function addRacingEvent({ target }) {
   console.log(target);
+  addPutCarNameEvent();
   let carNames = getCarNames();
   let retryNumber = getAttempts();
   if (checkCarName() && checkInputNumber(retryNumber)) {

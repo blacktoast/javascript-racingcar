@@ -28,7 +28,7 @@ export function checkCarName() {
   return false;
 }
 
-export function addPutCarNameEvent({ target }) {
+export function addPutCarNameEvent() {
   if (checkCarName()) {
     renderCar();
   }

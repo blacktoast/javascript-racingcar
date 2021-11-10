@@ -1,3 +1,5 @@
+import { getCarPlayerByClass } from "../utils/dom.js";
+
 export function hideView($element) {
   $element.style.display = "none";
 }
@@ -7,7 +9,7 @@ export function showView($element) {
 }
 
 export function forwardHtml() {
-  return;
+  return `<div class="forward-icon mt-2">⬇️️</div>`;
 }
 
 export function addLoadingHtml() {
@@ -18,6 +20,15 @@ export function addLoadingHtml() {
             </div>`;
 }
 
-export function renderForwardCar() {
-  
+export function renderForwardCar(players) {
+  let template = players.map((e) => {
+    let tmp = "";
+    for (let i = 0; i < e.state; i++) {
+      tmp += forwardHtml();
+    }
+    tmp += addLoadingHtml();
+    let $carPlayer = getCarPlayerByClass();
+    $carPlayer.dataset.carId[e.name];
+    console.log($carPlayer);
+  });
 }
