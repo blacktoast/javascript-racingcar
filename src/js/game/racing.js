@@ -44,13 +44,9 @@ function goOneStep(players) {
   });
 }
 
-function startRace(attempts) {
+function startRace(attemptsNumber) {
   let players = state.cars;
-  console.log(attempts);
-  for (let index = 0; index < attempts; index++) {
-    setInterval(goOneStep, 1000, players);
-    console.log("object");
-  }
+  
   console.log(state);
 }
 
