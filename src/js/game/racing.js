@@ -48,8 +48,8 @@ function startRace(attempts) {
   let players = state.cars;
   console.log(attempts);
   for (let index = 0; index < attempts; index++) {
-    goOneStep(players);
-    console.log(state.cars);
+    setInterval(goOneStep, 1000, players);
+    console.log("object");
   }
   console.log(state);
 }
