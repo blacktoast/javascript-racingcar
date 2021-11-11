@@ -1,6 +1,7 @@
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
-canvas.width = 100;
+canvas.width = window.innerWidth * 0.2;
+canvas.height = window.innerHeight * 0.5;
 var width = canvas.width;
 var height = canvas.height;
 var particles = [];
@@ -15,7 +16,7 @@ function initParticles() {
 function createParticle(i) {
   // initial position in middle of canvas
   var x = width * 0.5;
-  var y = height * 0.9;
+  var y = height;
   // randomize the vx and vy a little - but we still want them flying 'up' and 'out'
   var vx = -5 + Math.random() * 10;
   var vy = Math.random() - 10;
