@@ -6,7 +6,7 @@ function carPlayerHtml(carNames) {
       return `<div class="mr-2">
                 <div class="car-player" data-car-id=${e}>${e}
                 </div>
-                <div class="forward-container"></div>
+                <div class="racing-container"></div>
               </div>
     `;
     })

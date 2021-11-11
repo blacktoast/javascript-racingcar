@@ -1,4 +1,4 @@
-import { renderForwardCar } from "../render/renderRacing.js";
+import { hideLoading, renderForwardCar } from "../render/renderRacing.js";
 import { state } from "../state.js";
 import { getCarNames } from "./../utils/dom.js";
 
@@ -57,10 +57,12 @@ function startRace(attemptsNumber) {
         clearTimeout(time);
         time = setTimeout(step, 1000); // (*)
       }
+      if (count === Number(attemptsNumber)) {
+        hideLoading();
+      }
       count++;
     }, 1000)
   );
-  console.log(state);
 }
 
 export function startRacing(attempts) {
