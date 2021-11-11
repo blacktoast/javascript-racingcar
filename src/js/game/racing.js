@@ -1,3 +1,4 @@
+import { winnerCelebrate } from "../render/animation.js";
 import { hideLoading, renderForwardCar } from "../render/renderRacing.js";
 import { state } from "../state.js";
 import { getCarNames } from "./../utils/dom.js";
@@ -45,6 +46,12 @@ function goOneStep(players) {
   });
 }
 
+function whoWinner() {}
+
+function winner() {
+  alert("winner!1");
+}
+
 function startRace(attemptsNumber) {
   let players = state.cars;
   let count = 0;
@@ -59,6 +66,8 @@ function startRace(attemptsNumber) {
       }
       if (count === Number(attemptsNumber)) {
         hideLoading();
+        //  setTimeout(winnerCelebrate, 1000);
+        setTimeout(winner, 2000);
       }
       count++;
     }, 1000)
