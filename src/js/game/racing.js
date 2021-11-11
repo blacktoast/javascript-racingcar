@@ -1,4 +1,4 @@
-import { renderForwardCar } from "../render/renderUtils.js";
+import { renderForwardCar } from "../render/renderRacing.js";
 import { state } from "../state.js";
 import { getCarNames } from "./../utils/dom.js";
 
