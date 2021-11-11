@@ -1,7 +1,8 @@
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
-var width = (canvas.width = window.innerWidth);
-var height = (canvas.height = window.innerHeight);
+canvas.width = 100;
+var width = canvas.width;
+var height = canvas.height;
 var particles = [];
 var colors = ["#029DAF", "#E5D599", "#FFC219", "#F07C19", "#E32551"];
 
@@ -46,13 +47,6 @@ function render() {
     particles[i].draw();
   }
   requestAnimationFrame(render);
-}
-
-// resize
-window.addEventListener("resize", resize);
-function resize() {
-  width = canvas.width = window.innerWidth;
-  height = canvas.height = window.innerHeight;
 }
 
 // init

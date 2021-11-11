@@ -46,10 +46,24 @@ function goOneStep(players) {
   });
 }
 
-function whoWinner() {}
+function whoWinner() {
+  let players = state.cars;
+  let states = players.map((e) => {
+    return e.state;
+  });
+  let max = Math.max(...states);
+  let winner = [];
+
+  players.map((e) => {
+    if (e.state === max) {
+      winner.push(e.name);
+    }
+  });
+  console.log(winner, states);
+}
 
 function winner() {
-  alert("winner!1");
+  alert("winner!!!");
 }
 
 function startRace(attemptsNumber) {
@@ -65,8 +79,9 @@ function startRace(attemptsNumber) {
         time = setTimeout(step, 1000); // (*)
       }
       if (count === Number(attemptsNumber)) {
+        whoWinner();
         hideLoading();
-        //  setTimeout(winnerCelebrate, 1000);
+        setTimeout(winnerCelebrate, 1000);
         setTimeout(winner, 2000);
       }
       count++;
