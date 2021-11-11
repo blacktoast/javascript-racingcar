@@ -38,3 +38,52 @@ fieldset {
 .test {
   display: block;
 }
+
+.winner-container {
+  position: absolute;
+}
+
+.confetti {
+  position: absolute;
+  left: 17px;
+  bottom: 9px;
+}
+svg {
+  width: 18px;
+  height: 16px;
+  display: block;
+  stroke-width: 1px;
+  fill: none;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+svg * {
+  transition: stroke-dashoffset 0.2s;
+  stroke-dasharray: 15 20;
+  stroke-dashoffset: var(--stroke-dashoffset, 0);
+  stroke: var(--stroke-all, var(--stroke, var(--confetti-2)));
+}
+svg *:nth-child(2) {
+  --stroke: var(--confetti-3);
+}
+svg *:nth-child(3) {
+  --stroke: var(--confetti-1);
+}
+
+.emitter {
+  position: absolute;
+  left: 4px;
+  bottom: 4px;
+  pointer-events: none;
+}
+.emitter div {
+  width: 4px;
+  height: 4px;
+  margin: -2px 0 0 -2px;
+  border-radius: 1px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-style: preserve-3d;
+  background: var(--confetti-all, var(--b, none));
+}
