@@ -51,6 +51,16 @@
 --[] 전진할떄 렌더링
 --[] 
 
+## BDD
+[] 자동차 이름 입력칸에 자동차 이름을 , 구분하여 입력받는다.
+[] 확인 버튼을 누르면 밑에 해당 자동차 이름들을 렌더링한다
+[] 자동차 이름에 공백이 들어가면 오류 매세지를 띄운다
+[] 시도횟수에 0 또는 음수가 들어갈시 오류 매세지를 띄운다.
+[] 램덤숫자로 3초과할시 전진한다.
+[] 각 전진횟수당 1초가 소요된다.
+[] 모든 레이싱이 끝나면 2초뒤 alert 창을 띄운다
+
+
 ## ⚙️ Before Started
 
 #### <img alt="Tip" src="https://img.shields.io/static/v1.svg?label=&message=Tip&style=flat-square&color=673ab8"> 로컬에서 서버 띄워서 손쉽게 static resources 변경 및 확인하는 방법
