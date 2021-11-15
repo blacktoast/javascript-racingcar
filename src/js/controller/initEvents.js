@@ -7,6 +7,7 @@ import {
   getCarNames,
 } from "./../utils/dom.js";
 import { addPutCarNameEvent, checkCarName } from "./carEvent.js";
+import { addResetEvent } from "./reset.js";
 
 function checkInputNumber() {
   let number = getAttempts();
@@ -32,6 +33,8 @@ export function initEvents() {
   let $putCar = $(".put-car-name");
   console.log($putCar);
   let $startBtn = $(".start");
+  let $resetBtn = $(".resetBtn");
   $putCar.addEventListener("click", addPutCarNameEvent);
   $startBtn.addEventListener("click", addRacingEvent);
+  $resetBtn.addEventListener("click", addResetEvent);
 }
